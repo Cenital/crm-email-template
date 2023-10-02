@@ -1,170 +1,255 @@
 <!doctype html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Simple Transactional Email</title>
-    <style>
-@media only screen and (max-width: 620px) {
-  table.body h1 {
-    font-size: 28px !important;
-    margin-bottom: 10px !important;
-  }
 
-  table.body p,
-table.body ul,
-table.body ol,
-table.body td,
-table.body span,
-table.body a {
-    font-size: 16px !important;
-  }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Cenital Default Email</title>
+  <style>
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf) format('truetype');
+    }
 
-  table.body .wrapper,
-table.body .article {
-    padding: 10px !important;
-  }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: italic;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZclSds18E.ttf) format('truetype');
+    }
 
-  table.body .content {
-    padding: 0 !important;
-  }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+    }
 
-  table.body .container {
-    padding: 0 !important;
-    width: 100% !important;
-  }
+    @font-face {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+    }
+  </style>
+  <style>
+    @media only screen and (max-width: 620px) {
+      table.body h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
 
-  table.body .main {
-    border-left-width: 0 !important;
-    border-radius: 0 !important;
-    border-right-width: 0 !important;
-  }
+      table.body p,
+      table.body ul,
+      table.body ol,
+      table.body td,
+      table.body span,
+      table.body a {
+        font-size: 16px !important;
+      }
 
-  table.body .btn table {
-    width: 100% !important;
-  }
+      table.body .header,
+      table.body .wrapper,
+      table.body .article {
+        padding: 20px !important;
+      }
 
-  table.body .btn a {
-    width: 100% !important;
-  }
+      table.body .content {
+        padding: 0 !important;
+      }
 
-  table.body .img-responsive {
-    height: auto !important;
-    max-width: 100% !important;
-    width: auto !important;
-  }
-}
-@media all {
-  .ExternalClass {
-    width: 100%;
-  }
+      table.body .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
 
-  .ExternalClass,
-.ExternalClass p,
-.ExternalClass span,
-.ExternalClass font,
-.ExternalClass td,
-.ExternalClass div {
-    line-height: 100%;
-  }
+      table.body .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
 
-  .apple-link a {
-    color: inherit !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-    text-decoration: none !important;
-  }
+      table.body .btn table {
+        width: 100% !important;
+      }
 
-  #MessageViewBody a {
-    color: inherit;
-    text-decoration: none;
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-  }
+      table.body .btn a {
+        width: 100% !important;
+      }
 
-  .btn-primary table td:hover {
-    background-color: #34495e !important;
-  }
+      table.body .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
 
-  .btn-primary a:hover {
-    background-color: #34495e !important;
-    border-color: #34495e !important;
-  }
-}
-</style>
-  </head>
-  <body style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
-    <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f6f6f6; width: 100%;" width="100%" bgcolor="#f6f6f6">
-      <tr>
-        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
-        <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto;" width="580" valign="top">
-          <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px;">
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
 
-            <!-- START CENTERED WHITE CONTAINER -->
-            <table role="presentation" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border-radius: 3px; width: 100%;" width="100%">
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
 
-              <!-- START MAIN CONTENT AREA -->
-              <tr>
-                <td class="wrapper" style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 20px;" valign="top">
-                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                    <tr>
-                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Hi there,</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%;" width="100%">
-                          <tbody>
-                            <tr>
-                              <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;" valign="top">
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
-                                  <tbody>
-                                    <tr>
-                                      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: center; background-color: #3498db;" valign="top" align="center" bgcolor="#3498db"> <a href="http://htmlemail.io" target="_blank" style="border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-decoration: none; text-transform: capitalize; background-color: #3498db; border-color: #3498db; color: #ffffff;">Call To Action</a> </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">This is a really simple email template. Its sole purpose is to get the recipient to click the button with no distractions.</p>
-                        <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">Good luck! Hope it works.</p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      .btn-primary table td:hover {}
+
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+  </style>
+</head>
+
+<body
+  style="font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+  <span class="preheader"
+    style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
+    This is preheader text. Some clients will show this text as a preview.</span>
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body"
+    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
+    <tr>
+      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+      <td class="container"
+        style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; max-width: 580px; padding: 10px; width: 580px; margin: 0 auto;"
+        width="580" valign="top">
+        <div class="content"
+          style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px;">
+
+          <!-- START CENTERED WHITE CONTAINER -->
+          <table role="presentation" class="main"
+            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border-radius: 3px; width: 100%;"
+            width="100%">
+            <tr>
+              <td class="header"
+                style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding: 35px 30px; background: #F4F4F4;"
+                valign="top">
+                <img alt="Cenital" width="105" height="32"
+                  style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%; margin-bottom: 15px;"
+                  src="data:image/png;base64,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">
+                <div style="font-size: 16px;text-align: left;color:#474646;font-family: 'Source Sans Pro',Arial,sans-serif;border-bottom:1px solid #000;padding-bottom:10px">
+                  Entender es informarse.</div>
+              </td>
+            </tr>
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper"
+                style="font-family: sans-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; padding: 30px;"
+                valign="top">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                  style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;"
+                  width="100%">
+                  <tr>
+                    <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">
+                      <p
+                        style="font-family: Georgia, serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                        Hi there,</p>
+                      <p
+                        style="font-family: Georgia, serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                        Sometimes you just want to send a simple HTML email with a simple design and clear call to
+                        action. This is it.</p>
+                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary"
+                        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%;"
+                        width="100%">
+                        <tbody>
+                          <tr>
+                            <td align="left"
+                              style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;"
+                              valign="top">
+                              <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+                                style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto; width: 100%;"
+                                width="100%">
+                                <tbody>
+                                  <tr>
+                                    <td
+                                      style="font-family: sans-serif; font-size: 14px; vertical-align: top; background-color: #ffffff; border-radius: 5px; text-align: center;"
+                                      valign="top" bgcolor="#ffffff" align="center"> <a href="http://htmlemail.io"
+                                        target="_blank"
+                                        style="border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-decoration: none; text-transform: capitalize; text-align: center; background-color: #EA473B; border-color: #EA473B; color: #ffffff;">Call
+                                        To Action</a> </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p
+                        style="font-family: Georgia, serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                        This is a really simple email template. Its sole purpose is to get the recipient to click the
+                        button with no distractions.</p>
+                      <p
+                        style="font-family: Georgia, serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 15px;">
+                        Good luck! Hope it works.</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
             <!-- END MAIN CONTENT AREA -->
+          </table>
+          <!-- END CENTERED WHITE CONTAINER -->
+
+          <!-- START FOOTER -->
+          <div class="footer" style="clear: both; margin-top: 10px; text-align: center; width: 100%;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0"
+              style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;"
+              width="100%">
+              <tr>
+                <td class="content-block"
+                  style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 10px; text-align: center;"
+                  valign="top" align="center">
+                  <span style="color: #999999; font-size: 10px; text-align: center;">Este correo fue enviado por única
+                    vez. <br>Si tenés cualquier consulta podés escribirnos a <a href="mailto:info@cenital.com"
+                      style="text-decoration: underline; font-size: 10px; text-align: center; color: #EA473B;">info@cenital.com</a>.</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="content-block powered-by"
+                  style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 10px; text-align: center;"
+                  valign="top" align="center">
+                  <img alt width="61" height="19"
+                    src="data:image/png;base64,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"
+                    style="border: none; -ms-interpolation-mode: bicubic; max-width: 100%;">
+                </td>
+              </tr>
             </table>
-            <!-- END CENTERED WHITE CONTAINER -->
-
-            <!-- START FOOTER -->
-            <div class="footer" style="clear: both; margin-top: 10px; text-align: center; width: 100%;">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                <tr>
-                  <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 12px; text-align: center;" valign="top" align="center">
-                    <span class="apple-link" style="color: #999999; font-size: 12px; text-align: center;">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br> Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif" style="text-decoration: underline; color: #999999; font-size: 12px; text-align: center;">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; color: #999999; font-size: 12px; text-align: center;" valign="top" align="center">
-                    Powered by <a href="http://htmlemail.io" style="color: #999999; font-size: 12px; text-align: center; text-decoration: none;">HTMLemail</a>.
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <!-- END FOOTER -->
-
           </div>
-        </td>
-        <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
-      </tr>
-    </table>
-  </body>
+          <!-- END FOOTER -->
+
+        </div>
+      </td>
+      <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;" valign="top">&nbsp;</td>
+    </tr>
+  </table>
+</body>
+
 </html>

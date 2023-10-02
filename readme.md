@@ -40,19 +40,38 @@ Example:
 
 [More information here](https://www.smashingmagazine.com/2017/01/introduction-building-sending-html-email-for-web-developers/)
 
-## Tried and tested on all major email clients
+-----
+# Tools
 
-Tested on mobile, desktop and web.
+## Auttomatic Juice
 
-![Templates Tested on Email Clients](https://cloud.githubusercontent.com/assets/15963/17391543/bc289abe-59cb-11e6-9946-605a85f8c522.jpg)
+Found on https://github.com/Automattic/juice
 
-## More HTML email resources
+```
+npm install juice -g
+juice email.html email-inlined.html 
 
-* [10 HTML Email Templates for Developers](https://htmlemail.io)
-* [An Introduction To Building And Sending HTML Email](https://www.smashingmagazine.com/2017/01/introduction-building-sending-html-email-for-web-developers/)
-* [Grunt Email Design Workflow](https://github.com/leemunroe/grunt-email-design)
-* [Everything Web Developers Need To Know About Transactional Email](https://webdesign.tutsplus.com/articles/everything-developers-need-to-know-about-sending-transactional-email--cms-31759)
-* [Manage and Send Email Templates To Yourself](https://postdrop.io)
+```
 
-This free template is part of a pack of responsive email templates for developers and startups available on [HTML Email](https://htmlemail.io).
-[![image](https://user-images.githubusercontent.com/15963/111846354-df393280-88c3-11eb-959c-10a3916d5733.png)](https://htmlemail.io)
+
+# Cenital CRM
+
+## Nuevo registro
+
+```
+<h1>HOLA</h1>
+{{site_name}}, {{home_url}}, {{site_email}}, {{user_first_name}}, {{user_last_name}}, {{user_email}}
+```
+
+## Verificar dirección de correo electrónico
+
+```
+<br /><a href={{verification_link}}>VERIFICAR</a>
+```
+
+## Firma y magic link
+
+```
+<br /><a href={{magic_link_url}}>Con este link podés ingresar al sitio.</a>
+<h1>CHAU</h1>
+```
