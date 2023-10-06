@@ -50,7 +50,7 @@ Found on https://github.com/Automattic/juice
 ```
 npm install juice -g
 juice email.html email-inlined.html 
-
+juice --web-resources-images false email-verification.html email-verification-inlined.html
 ```
 
 
