@@ -4,10 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="color-scheme" content="light">
-  <meta name="supported-color-schemes" content="light dark">
-
-  <title>Cenital Welcome Email</title>
+  <title>Cenital Verification Email</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i" rel="stylesheet">
   <style>
     /* -------------------------------------
@@ -41,7 +38,6 @@
     }
 
     table td {
-      font-family: sans-serif;
       font-size: 14px;
       vertical-align: top;
     }
@@ -90,42 +86,14 @@
     .wrapper {
       box-sizing: border-box;
       padding: 30px;
+      font-family: Georgia, serif;
+      font-size: 16px;
     }
 
     .content-block {
       padding-bottom: 10px;
       padding-top: 10px;
     }
-
-    .mejores-amigos {
-      background-color: #F9C22E;
-      padding: 30px;
-    }
-
-    .mejores-amigos tr td {
-      display: inline-block;
-    }
-
-
-    .mejores-amigos .title {
-      width: 210px;
-    }
-
-    .mejores-amigos .content-block {
-      max-width: 290px;
-      padding: 0;
-    }
-
-    .mejores-amigos .title div {
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 120%;
-    }
-
-    .mejores-amigos .title div img {
-      vertical-align: middle;
-    }
-
 
     .footer {
       clear: both;
@@ -173,8 +141,6 @@
     p,
     ul,
     ol {
-      font-family: Georgia, serif;
-      font-size: 16px;
       font-weight: normal;
       margin: 0;
       margin-bottom: 15px;
@@ -240,20 +206,6 @@
       background-color: #EA473B;
       border-color: #EA473B;
       color: #ffffff;
-    }
-
-    a.btn-secondary {
-      color: #6a6a6a;
-      border: 2px solid #6a6a6a;
-      padding: 10px 10px;
-      border-radius: 15px;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-top: 10px;
-      display: inline-block;
-      font-size: 11px;
-      line-height: 100%;
     }
 
     /* -------------------------------------
@@ -325,12 +277,12 @@
         margin-bottom: 10px !important;
       }
 
-      table.body .main p,
-      table.body .main ul,
-      table.body .main ol,
-      table.body .main td,
-      table.body .main span,
-      table.body .main a {
+      table.body p,
+      table.body ul,
+      table.body ol,
+      table.body td,
+      table.body span,
+      table.body a {
         font-size: 16px !important;
       }
 
@@ -367,28 +319,6 @@
         height: auto !important;
         max-width: 100% !important;
         width: auto !important;
-      }
-
-      .mejores-amigos .title,
-      .mejores-amigos .content-block {
-        width: 100%;
-        max-width: 100%;
-      }
-      .mejores-amigos .content-block {
-        margin-top: 15px;
-      }
-
-      .mejores-amigos .content-block * {
-        font-size: 14px !important;
-      }
-
-      .mejores-amigos .content-block a {
-        font-size: 12px !important;
-      }
-
-      .footer td span,
-      .footer td a       {
-        font-size: 10px !important;
       }
     }
 
@@ -436,15 +366,11 @@
         border-color: #34495e !important;
       }
     }
-
-    @media (prefers-color-scheme: dark) {
-      .mejores-amigos * {}
-    }
   </style>
 </head>
 
 <body>
-  <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+  <span class="preheader">Un último paso.</span>
   <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
     <tr>
       <td>&nbsp;</td>
@@ -468,27 +394,17 @@
                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td>
-                      <p>Hi there,</p>
-                      <p>Sometimes you just want to send a simple HTML email with a simple design and clear call to
-                        action. This is it.</p>
-                      <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
-                        <tbody>
-                          <tr>
-                            <td align="left">
-                              <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-                                <tbody>
-                                  <tr>
-                                    <td> <a href="http://htmlemail.io" target="_blank">Call To Action</a> </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <p>This is a really simple email template. Its sole purpose is to get the recipient to click the
-                        button with no distractions.</p>
-                      <p>Good luck! Hope it works.</p>
+                      <p>Hola,</p>
+
+                      <p>¿Cómo estás? Acá Javier Borelli nuevamente, el responsable de Comunidad y Membresía de Cenital.
+                        Te escribo porque nos mencionaste que actualmente tenés un correo en el que recibís nuestros
+                        newsletters y otro que está asociado a tu relación como Mejor amigo de Cenital. Para evitar la
+                        duplicación de mails y emprolijar la base de datos te pedimos que <a
+                          href="{{verification_link}}">verifiques tu dirección de correo electrónico</a>. </p>
+
+                      <p>Por cualquier duda o consulta siempre estoy a disposición.</p>
+                      <p>Un abrazo,</p>
+                      <p>Javier</p>
                     </td>
                   </tr>
                 </table>
@@ -498,24 +414,6 @@
             <!-- END MAIN CONTENT AREA -->
           </table>
           <!-- END CENTERED WHITE CONTAINER -->
-
-          <!-- START MEJORES AMIGOS -->
-          <div class="mejores-amigos">
-            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td class="title">
-                  <div>Mejores <img src="https://cenital.com/wp-content/uploads/emails/verified.png" width=28 height=30
-                      alt=""></div>
-                  <div>— Amigos</div>
-                </td>
-                <td class="content-block">
-                  <div>El apoyo de nuestros lectores nos permite hacer periodismo sin condicionantes. Sumate a nuestro círculo de Mejores amigos y ayudanos a seguir haciéndolo.</div>
-                  <a class="btn-secondary" href="https://cenital.com/sumate">Sumarme a Mejores Amigos</a>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <!-- END MEJORES AMIGOS -->
 
           <!-- START FOOTER -->
           <div class="footer">
